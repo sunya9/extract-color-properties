@@ -15,7 +15,6 @@ jobs:
           always-auth: true
       - run: yarn
       - run: yarn build
-      - run: echo "//registry.yarnpkg.com/:_authToken=$NODE_AUTH_TOKEN" >>~/.npmrc
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: npm publish
