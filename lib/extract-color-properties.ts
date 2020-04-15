@@ -37,7 +37,8 @@ export const plugin = postcss.plugin<Options>(
 
 export function extractColorProperties(
   css: postcss.ParserInput | postcss.Result | postcss.LazyResult | postcss.Root,
-  options?: postcss.ProcessOptions
+  options?: Options,
+  processOptions?: postcss.ProcessOptions
 ) {
-  return postcss([plugin()]).process(css, options)
+  return postcss([plugin(options)]).process(css, processOptions)
 }
