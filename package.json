@@ -1,8 +1,19 @@
 {
   "name": "extract-color-properties",
+  "description": "Extracts the properties related to the color in the selector that are wrapped in media query.",
   "version": "1.0.0",
-  "main": "./dist/index.js",
-  "license": "MIT",
+  "author": {
+    "email": "mugen.xyz@gmail.com",
+    "name": "sunya9",
+    "url": "https://unsweets.net/"
+  },
+  "bugs": {
+    "url": "https://github.com/sunya9/extract-color-properties/issues",
+    "email": "mugen.xyz@gmail.com"
+  },
+  "dependencies": {
+    "postcss": "^7.0.27"
+  },
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "@types/node": "^13.11.1",
@@ -20,12 +31,24 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "postcss": "^7.0.27"
+  "homepage": "https://github.com/sunya9/extract-color-properties",
+  "keywords": [
+    "css",
+    "postcss"
+  ],
+  "directories": {
+    "lib": "./lib",
+    "test": "./__tests__"
+  },
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunya9/extract-color-properties"
   },
   "scripts": {
-    "test": "jest",
     "build": "rimraf dist && tsc --build tsconfig.json",
-    "lint": "eslint --ext ts --ignore-path .gitignore --fix ."
+    "lint": "eslint --ext ts --ignore-path .gitignore --fix .",
+    "test": "jest"
   }
 }
