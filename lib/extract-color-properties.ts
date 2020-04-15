@@ -16,7 +16,6 @@ export const plugin = postcss.plugin<Options>(
     }
 
     function handleAtRule(atRule: postcss.AtRule) {
-      console.log(atRule.params)
       if (!mediaQueryRegExp.test(atRule.params)) return
       atRule.walkRules(handleRule)
     }
