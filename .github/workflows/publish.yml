@@ -1,7 +1,8 @@
-name: Publish package
+name: Publish
 on:
   release:
-    types: [created]
+    types: [published, created, edited]
+
 jobs:
   publish:
     runs-on: ubuntu-latest
