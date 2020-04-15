@@ -19,5 +19,6 @@
   .baz {
     color: white;
     background: black;
+    height: 100px;
   }
 }
