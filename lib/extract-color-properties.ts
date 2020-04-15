@@ -1,7 +1,7 @@
 import * as postcss from 'postcss'
 import { colorProperties } from './color-properties'
 
-interface Options {
+export interface Options {
   excludeProperties: string[]
 }
 
@@ -25,8 +25,8 @@ export const plugin = postcss.plugin<Options>(
 
     function handleDecl(decl: postcss.Declaration) {
       if (
-        colorProperties.includes(decl.prop) &&
-        !options?.excludeProperties.includes(decl.prop)
+        colorProperties.includes(decl.prop) ||
+        options?.excludeProperties.includes(decl.prop)
       )
         return
       decl.remove()
