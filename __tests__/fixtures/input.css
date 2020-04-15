@@ -1,0 +1,27 @@
+.foo {
+  width: 100px;
+  color: white;
+  background-color: black;
+}
+.bar {
+  width: 100px;
+}
+.baz {
+  color: black;
+  background: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .foo {
+    width: 100px;
+    color: black;
+    background-color: white;
+  }
+  .bar {
+    width: 100px;
+  }
+  .baz {
+    color: white;
+    background: black;
+  }
+}

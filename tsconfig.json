@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "target": "ES5",
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "declaration": true,
+    "outDir": "dist",
+    "baseUrl": "lib"
+  },
+  "exclude": ["node_modules", "__tests__", "dist"]
+}
