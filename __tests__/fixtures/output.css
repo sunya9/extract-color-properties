@@ -11,6 +11,12 @@
   background: white;
 }
 
+@media screen and (min-width: 480px) {
+  .foo {
+    width: 200px;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .foo {
     color: black;
@@ -20,5 +26,11 @@
     color: white;
     background: black;
     height: 100px;
+  }
+}
+
+@media screen and (min-width: 480px) and (prefers-color-scheme: light) {
+  .foo {
+    background: purple;
   }
 }

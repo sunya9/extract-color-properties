@@ -2,8 +2,10 @@ import * as postcss from 'postcss'
 import { colorProperties } from './color-properties'
 
 export interface Options {
-  excludeProperties: string[]
+  excludeProperties?: string[]
 }
+
+const mediaQueryRegExp = /prefers-color-scheme:\s*(dark|light|no-preference)/
 
 export const plugin = postcss.plugin<Options>(
   'extract-color-properties',
@@ -14,6 +16,8 @@ export const plugin = postcss.plugin<Options>(
     }
 
     function handleAtRule(atRule: postcss.AtRule) {
+      console.log(atRule.params)
+      if (!mediaQueryRegExp.test(atRule.params)) return
       atRule.walkRules(handleRule)
     }
 
@@ -26,7 +30,7 @@ export const plugin = postcss.plugin<Options>(
     function handleDecl(decl: postcss.Declaration) {
       if (
         colorProperties.includes(decl.prop) ||
-        options?.excludeProperties.includes(decl.prop)
+        options?.excludeProperties?.includes(decl.prop)
       )
         return
       decl.remove()
