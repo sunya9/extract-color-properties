@@ -1,7 +1,7 @@
 {
   "name": "extract-color-properties",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^25.2.1",
@@ -17,6 +17,9 @@
     "ts-jest": "^25.3.1",
     "typescript": "^3.8.3"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "postcss": "^7.0.27"
   },
