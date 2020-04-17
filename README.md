@@ -52,10 +52,12 @@ module.exports = {
 ### programmatically
 
 ```js
-const { extractColorProperties } = require('extract-color-properties')
+const {
+  extractColorProperties,
+} = require('extract-color-properties/lib/extract-color-properties')
 const result = extractColorProperties('.foo { color: black }')
 ```
 
 ## Configuration
 
-- `excludeProperties: string[]`: Remove from deletion target.
+- `excludeProperties: string[]`: Set the properties to be excluded from the deletion target.

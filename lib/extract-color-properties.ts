@@ -1,4 +1,4 @@
-import * as postcss from 'postcss'
+import postcss from 'postcss'
 import { colorProperties } from './color-properties'
 
 export interface Options {
