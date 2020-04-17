@@ -1,7 +1,7 @@
 {
   "name": "extract-color-properties",
   "description": "Extracts the properties related to the color in the selector that are wrapped in media query.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "email": "mugen.xyz@gmail.com",
     "name": "sunya9",
