@@ -1,5 +1,5 @@
 import * as fs from 'fs'
-import * as postcss from 'postcss'
+import postcss from 'postcss'
 import {
   plugin,
   extractColorProperties,

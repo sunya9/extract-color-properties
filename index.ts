@@ -1,3 +1,2 @@
-import { plugin, extractColorProperties } from './lib/extract-color-properties'
-module.exports = plugin
-module.exports.extractColorProperties = extractColorProperties
+import { plugin } from './lib/extract-color-properties'
+export = plugin
